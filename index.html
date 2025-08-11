@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Antônio Guedes Advocacia</title>
-  <meta name="description" content="Estratégia jurídica e palavra precisa. Petições, pareceres e ghostwriting jurídico com rigor técnico e estilo." />
+  <meta name="description" content="Advocacia estratégica focada em resultado. Direito Bancário, Consumidor, Trabalhista e Cível, com comunicação clara e contínua." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -12,20 +12,31 @@
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    /* WhatsApp floating button */
+    .wa-fab {
+      position: fixed; right: 18px; bottom: 18px; z-index: 60;
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 14px; border-radius: 999px;
+      background: #16a34a; color: white; text-decoration: none; box-shadow: 0 10px 20px rgba(0,0,0,.12);
+      font-size: 14px;
+    }
+    .wa-fab:hover { filter: brightness(0.95); }
+    @media (max-width: 640px) { .wa-fab span { display:none; } }
   </style>
 </head>
 <body class="min-h-screen bg-neutral-50 text-neutral-900 selection:bg-black selection:text-white">
   <!-- NAVBAR -->
   <header class="sticky top-0 z-50 backdrop-blur bg-white/70 border-b border-neutral-200">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#home" class="font-semibold tracking-tight text-lg">Antônio Guedes Advocacia</a>
+      <a href="#home" class="flex items-center"><img src="assets/logo.png" alt="Antônio Guedes Advocacia" class="h-8 sm:h-10 w-auto" /></a>
       <nav class="hidden sm:flex gap-6 text-sm">
-        <a href="#servicos" class="hover:opacity-70">Serviços</a>
-        <a href="#obras" class="hover:opacity-70">Obras</a>
+        <a href="#demandas" class="hover:opacity-70">Demandas Mais Resolvidas</a>
         <a href="#sobre" class="hover:opacity-70">Sobre</a>
+        <a href="#meus-escritos" class="hover:opacity-70">Meus Escritos</a>
+        <a href="#blog" class="hover:opacity-70">Blog</a>
         <a href="#contato" class="hover:opacity-70">Contato</a>
       </nav>
-      <a href="#contato" class="inline-flex items-center rounded-2xl border border-neutral-800 px-3 py-1.5 text-sm hover:bg-neutral-900 hover:text-white transition">Fale comigo</a>
+      <a href="#contato" class="inline-flex items-center rounded-2xl border border-neutral-800 px-3 py-1.5 text-sm hover:bg-neutral-900 hover:text-white transition">Agendar consulta</a>
     </div>
   </header>
 
@@ -34,103 +45,46 @@
     <div class="absolute inset-0 -z-10 bg-gradient-to-b from-neutral-100 via-white to-neutral-50"></div>
     <div class="max-w-6xl mx-auto px-4 py-20 sm:py-28 grid lg:grid-cols-2 gap-10 items-center">
       <div>
-        <p class="text-xs uppercase tracking-widest text-neutral-500 mb-3">Advocacia • Escrita • Retórica</p>
-        <h1 class="text-3xl sm:text-5xl font-semibold leading-tight tracking-tight">
-          Estratégia jurídica e palavra precisa
-        </h1>
-        <p class="mt-4 text-neutral-700 max-w-prose">
-          Sou advogado e escritor. Elaboro peças processuais, pareceres e textos autorais com rigor técnico e estilo. Atendo com discrição, foco em resultados e zelo pela forma — porque a forma também comunica.
-        </p>
+        <p class="text-xs uppercase tracking-widest text-neutral-500 mb-3">Direito Bancário • Consumidor • Trabalho • Cível</p>
+        <h1 class="text-3xl sm:text-5xl font-semibold leading-tight tracking-tight">Defendo seus direitos com clareza, estratégia e comunicação constante.</h1>
+        <p class="mt-4 text-neutral-700 max-w-prose">Pós-graduação em Direito Bancário. Atuação sólida em Consumidor, Trabalhista e Cível. Atendimento em todo o Brasil, com atualização contínua do cliente em cada etapa do caso.</p>
         <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#servicos" class="rounded-2xl bg-neutral-900 text-white px-4 py-2 text-sm hover:opacity-90">Ver serviços</a>
-          <a href="#contato" class="rounded-2xl border border-neutral-900 px-4 py-2 text-sm hover:bg-neutral-900 hover:text-white">Solicitar proposta</a>
+          <a href="#demandas" class="rounded-2xl bg-neutral-900 text-white px-4 py-2 text-sm hover:opacity-90">Ver demandas mais resolvidas</a>
+          <a href="https://wa.me/557999120075" target="_blank" class="rounded-2xl border border-neutral-900 px-4 py-2 text-sm hover:bg-neutral-900 hover:text-white">Falar no WhatsApp</a>
         </div>
         <div class="mt-6 text-xs text-neutral-500">Aracaju • Atendimentos em todo o Brasil</div>
       </div>
       <div class="relative">
-        <img src="./assets/logo.png" alt="Logotipo Antônio Guedes — Advocacia" class="w-full rounded-3xl shadow-sm object-contain bg-white p-6" />
+        <img src="assets/portrait.jpg" alt="Antônio Guedes — retrato profissional" class="w-full rounded-3xl shadow-sm object-cover" style="aspect-ratio: 4/3;" />
       </div>
     </div>
   </section>
 
-  <!-- SERVIÇOS -->
-  <section id="servicos" class="border-t border-neutral-200 bg-white">
+  <!-- DEMANDAS MAIS RESOLVIDAS -->
+  <section id="demandas" class="border-t border-neutral-200 bg-neutral-50">
     <div class="max-w-6xl mx-auto px-4 py-16">
-      <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Serviços</h2>
-      <p class="mt-2 text-neutral-600 max-w-prose">Atuação sob demanda, com sigilo e adequação ao estilo do cliente.</p>
+      <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Demandas Mais Resolvidas</h2>
+      <p class="mt-2 text-neutral-600 max-w-prose">Ao longo da minha atuação, estas são algumas situações jurídicas atendidas com maior incidência.</p>
       <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="p-6 rounded-2xl border bg-white hover:shadow-sm transition">
-          <h3 class="font-medium">Peças Processuais</h3>
-          <ul class="mt-3 text-sm text-neutral-700 space-y-2 list-disc list-inside">
-            <li>Petições iniciais e defesas</li>
-            <li>Recursos e memoriais</li>
-            <li>Estratégia de estrutura e linguagem</li>
-          </ul>
-        </div>
-        <div class="p-6 rounded-2xl border bg-white hover:shadow-sm transition">
-          <h3 class="font-medium">Pareceres &amp; Consultas</h3>
-          <ul class="mt-3 text-sm text-neutral-700 space-y-2 list-disc list-inside">
-            <li>Análise técnica objetiva</li>
-            <li>Pesquisa jurisprudencial</li>
-            <li>Notas executivas e sumários</li>
-          </ul>
-        </div>
-        <div class="p-6 rounded-2xl border bg-white hover:shadow-sm transition">
-          <h3 class="font-medium">Ghostwriting Jurídico</h3>
-          <ul class="mt-3 text-sm text-neutral-700 space-y-2 list-disc list-inside">
-            <li>Adequação ao seu estilo</li>
-            <li>Sigilo absoluto</li>
-            <li>Revisão dupla e prazos</li>
-          </ul>
-        </div>
-        <div class="p-6 rounded-2xl border bg-white hover:shadow-sm transition">
-          <h3 class="font-medium">Conteúdo &amp; Edição</h3>
-          <ul class="mt-3 text-sm text-neutral-700 space-y-2 list-disc list-inside">
-            <li>Artigos, releases e copy</li>
-            <li>Edição de livros e e‑books</li>
-            <li>Revisão ortográfica (norma culta)</li>
-          </ul>
-        </div>
-        <div class="p-6 rounded-2xl border bg-white hover:shadow-sm transition">
-          <h3 class="font-medium">Aulas &amp; Roteiros</h3>
-          <ul class="mt-3 text-sm text-neutral-700 space-y-2 list-disc list-inside">
-            <li>Retórica e escrita</li>
-            <li>Planos e sequências didáticas</li>
-            <li>Workshops sob medida</li>
-          </ul>
-        </div>
-        <div class="p-6 rounded-2xl border bg-white hover:shadow-sm transition">
-          <h3 class="font-medium">Projetos Especiais</h3>
-          <ul class="mt-3 text-sm text-neutral-700 space-y-2 list-disc list-inside">
-            <li>Sites e perfis profissionais</li>
-            <li>Apresentações e dossiês</li>
-            <li>Propostas e notificações</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- OBRAS / PROJETOS -->
-  <section id="obras" class="border-t border-neutral-200 bg-neutral-50">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Obras &amp; Projetos</h2>
-      <p class="mt-2 text-neutral-600 max-w-prose">Destaques recentes.</p>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <div class="p-5 rounded-2xl border bg-white hover:shadow-sm transition">
-          <div class="text-xs uppercase tracking-widest text-neutral-500">Poesia</div>
-          <div class="mt-1 font-medium leading-snug">Livro infantil — O Zoológico de Antonella</div>
-          <div class="mt-1 text-sm text-neutral-600">Envio para editora em agosto/2025</div>
-        </div>
-        <div class="p-5 rounded-2xl border bg-white hover:shadow-sm transition">
-          <div class="text-xs uppercase tracking-widest text-neutral-500">Ensaio</div>
-          <div class="mt-1 font-medium leading-snug">Artigo — Revista da Biblioteca Nacional</div>
-          <div class="mt-1 text-sm text-neutral-600">Publicação citada em 2025</div>
-        </div>
-        <div class="p-5 rounded-2xl border bg-white hover:shadow-sm transition">
-          <div class="text-xs uppercase tracking-widest text-neutral-500">Direito do consumidor &amp; trabalho</div>
-          <div class="mt-1 font-medium leading-snug">Ações judiciais de destaque</div>
-          <div class="mt-1 text-sm text-neutral-600">Peças reconhecidas pela precisão e forma</div>
+        <div class="p-6 rounded-2xl border bg-white hover:shadow-sm transition"><h3 class="font-medium">Atraso ou cancelamento de voo</h3><p class="mt-2 text-sm text-neutral-700">Direitos do passageiro, reembolso, remarcação e indenizações.</p></div>
+        <div class="p-6 rounded-2xl border bg-white hover:shadow-sm transition"><h3 class="font-medium">Cobrança indevida</h3><p class="mt-2 text-sm text-neutral-700">Bancária, telefonia, energia, água, cartões e serviços digitais.</p></div>
+        <div class="p-6 rounded-2xl border bg-white hover:shadow-sm transition"><h3 class="font-medium">Problemas em compras</h3><p class="mt-2 text-sm text-neutral-700">Online ou presenciais: vício do produto, troca, garantia e arrependimento.</p></div>
+        <div class="p-6 rounded-2xl border bg-white hover:shadow-sm transition"><h3 class="font-medium">Demissão e verbas trabalhistas</h3><p class="mt-2 text-sm text-neutral-700">Rescisão, verbas devidas, justa causa e acordo.</p></div>
+        <div class="p-6 rounded-2xl border bg-white hover:shadow-sm transition"><h3 class="font-medium">Cobrança de dívidas bancárias</h3><p class="mt-2 text-sm text-neutral-700">Renegociação, revisão de contratos e defesa em execuções.</p></div>
+        <div class="p-6 rounded-2xl border bg-white hover:shadow-sm transition"><h3 class="font-medium">Cláusulas abusivas</h3><p class="mt-2 text-sm text-neutral-700">Contratos de consumo, bancários e civis em geral.</p></div>
+        <div class="p-6 rounded-2xl border bg-white hover:shadow-sm transition"><h3 class="font-medium">Fraudes bancárias e golpes virtuais</h3><p class="mt-2 text-sm text-neutral-700">Responsabilidade do banco, contestação e medidas urgentes.</p></div>
+        <div class="p-6 rounded-2xl border bg-white hover:shadow-sm transition"><h3 class="font-medium">Negativação indevida</h3><p class="mt-2 text-sm text-neutral-700">Retirada do registro e reparação por dano.</p></div>
+        <div class="p-6 rounded-2xl border bg-white hover:shadow-sm transition"><h3 class="font-medium">Indenizações por danos</h3><p class="mt-2 text-sm text-neutral-700">Morais e materiais em relações civis e de consumo.</p></div>
+        <div class="p-6 rounded-2xl border bg-white hover:shadow-sm transition"><h3 class="font-medium">Rescisões e distratos</h3><p class="mt-2 text-sm text-neutral-700">Contratos civis, imobiliários e de prestação de serviços.</p></div>
+        <!-- Card 'caso diferente' -->
+        <div class="p-6 rounded-2xl border bg-white hover:shadow-sm transition sm:col-span-2 lg:col-span-3">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+            <div>
+              <h3 class="font-medium">Seu caso é diferente?</h3>
+              <p class="mt-2 text-sm text-neutral-700">Envie um breve relato (2–3 linhas) e retorno com avaliação personalizada.</p>
+            </div>
+            <a href="https://wa.me/557999120075" target="_blank" class="rounded-2xl bg-neutral-900 text-white px-4 py-2 text-sm hover:opacity-90 w-fit">Fale Agora no WhatsApp</a>
+          </div>
         </div>
       </div>
     </div>
@@ -141,30 +95,67 @@
     <div class="max-w-6xl mx-auto px-4 py-16 grid lg:grid-cols-3 gap-10 items-start">
       <div class="lg:col-span-2">
         <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Sobre</h2>
-        <p class="mt-4 text-neutral-700 leading-relaxed">
-          Atuo na elaboração de textos jurídicos e literários com foco em clareza, coesão e estratégia retórica. Trabalho a unidade do discurso — da arquitetura dos tópicos à cadência das frases — para comunicar com precisão.
-        </p>
-        <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-neutral-700 text-sm">
-          <li class="p-3 rounded-xl border">Cível, Trabalho, Família, Consumidor e Penal (conteúdo escrito sob demanda)</li>
-          <li class="p-3 rounded-xl border">Pesquisa jurisprudencial e doutrinária com sínteses objetivas</li>
-          <li class="p-3 rounded-xl border">Revisão conforme VOLP e gramáticas de referência</li>
-          <li class="p-3 rounded-xl border">Atendimento remoto e sigiloso</li>
-        </ul>
+        <p class="mt-4 text-neutral-700 leading-relaxed">Pós-graduação em <strong>Direito Bancário</strong> e longa experiência em <strong>Consumidor, Trabalhista e Cível</strong>. Em outras áreas, atuo com rede de parceiros selecionados, coordenando a estratégia e mantendo a centralidade do atendimento.</p>
+        <div class="mt-6 p-5 rounded-2xl border bg-neutral-50">
+          <div class="text-sm text-neutral-600">Compromisso</div>
+          <div class="mt-1 text-base font-medium">Advocacia Comunicativa</div>
+          <p class="mt-2 text-neutral-700 text-sm">Os clientes têm o direito de se manter informados durante todo o processo — notícias boas ou ruins. Comunicação clara, prazos combinados e atualização periódica do andamento do caso.</p>
+        </div>
       </div>
       <aside class="space-y-3">
-        <div class="p-4 rounded-2xl border">
-          <div class="text-sm text-neutral-600">Reconhecimento</div>
-          <div class="mt-1 text-base">Publicado na Revista da Biblioteca Nacional</div>
-        </div>
-        <div class="p-4 rounded-2xl border">
-          <div class="text-sm text-neutral-600">Cidade</div>
-          <div class="mt-1 text-base">Aracaju/SE — atendimentos nacionais</div>
-        </div>
-        <div class="p-4 rounded-2xl border">
-          <div class="text-sm text-neutral-600">Disponibilidade</div>
-          <div class="mt-1 text-base">Prazos sob consulta • Entregas por etapas</div>
-        </div>
+        <div class="p-4 rounded-2xl border"><div class="text-sm text-neutral-600">Cidade</div><div class="mt-1 text-base">Aracaju/SE — atendimentos nacionais</div></div>
+        <div class="p-4 rounded-2xl border"><div class="text-sm text-neutral-600">Reconhecimento</div><div class="mt-1 text-base">Publicado na Revista da Biblioteca Nacional</div></div>
+        <div class="p-4 rounded-2xl border"><div class="text-sm text-neutral-600">Disponibilidade</div><div class="mt-1 text-base">Prazos sob consulta • Entregas por etapas</div></div>
       </aside>
+    </div>
+  </section>
+
+  <!-- MEUS ESCRITOS -->
+  <section id="meus-escritos" class="border-t border-neutral-200 bg-neutral-50">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Meus Escritos</h2>
+      <p class="mt-2 text-neutral-600 max-w-prose">Publicações e lançamentos. Em breve: capa do livro de outubro e acesso ao texto publicado na Revista Poesia Sempre.</p>
+      <div class="mt-8 grid sm:grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl border bg-white shadow-sm">
+          <div class="aspect-[4/3] bg-neutral-200 rounded-xl flex items-center justify-center"><span class="text-neutral-500 text-sm">[Capa do livro — lançamento em Outubro]</span></div>
+          <h3 class="mt-4 text-lg font-semibold">Título do Livro</h3>
+          <p class="mt-2 text-sm text-neutral-600">Breve descrição do livro que será lançado em outubro. Sinopse e informações de pré-venda serão adicionadas em breve.</p>
+          <a href="#" class="mt-3 inline-block underline hover:no-underline text-sm">Saiba mais</a>
+        </div>
+        <div class="p-6 rounded-2xl border bg-white shadow-sm">
+          <div class="aspect-[4/3] bg-neutral-200 rounded-xl flex items-center justify-center"><span class="text-neutral-500 text-sm">[Capa ou logotipo da revista]</span></div>
+          <h3 class="mt-4 text-lg font-semibold">Revista Poesia Sempre — Biblioteca Nacional</h3>
+          <p class="mt-2 text-sm text-neutral-600">Texto publicado no Volume 39, Ano 20 (2023). Link para leitura será incluído quando o arquivo for hospedado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog" class="border-t border-neutral-200 bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Blog</h2>
+      <p class="mt-2 text-neutral-600 max-w-prose">Textos breves sobre dúvidas comuns do dia a dia jurídico. Em breve, conteúdos adaptados do Instagram.</p>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <article class="p-6 rounded-2xl border bg-white hover:shadow-sm transition">
+          <div class="text-xs text-neutral-500">11/08/2025 • Consumidor</div>
+          <h3 class="mt-2 font-medium">Cobrança indevida: por onde começar</h3>
+          <p class="mt-2 text-sm text-neutral-700">O que guardar, como contestar e quando buscar reparação.</p>
+          <a href="#contato" class="mt-3 inline-block underline text-sm">Precisa de ajuda?</a>
+        </article>
+        <article class="p-6 rounded-2xl border bg-white hover:shadow-sm transition">
+          <div class="text-xs text-neutral-500">11/08/2025 • Trabalhista</div>
+          <h3 class="mt-2 font-medium">Demissão: checklist antes de assinar</h3>
+          <p class="mt-2 text-sm text-neutral-700">Itens essenciais para avaliar com calma e segurança.</p>
+          <a href="#contato" class="mt-3 inline-block underline text-sm">Fale comigo</a>
+        </article>
+        <article class="p-6 rounded-2xl border bg-white hover:shadow-sm transition">
+          <div class="text-xs text-neutral-500">11/08/2025 • Bancário</div>
+          <h3 class="mt-2 font-medium">Golpes bancários: quando o banco responde</h3>
+          <p class="mt-2 text-sm text-neutral-700">Responsabilidade da instituição e medidas imediatas.</p>
+          <a href="#contato" class="mt-3 inline-block underline text-sm">Agendar consulta</a>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -172,50 +163,22 @@
   <section id="contato" class="border-t border-neutral-200 bg-neutral-50">
     <div class="max-w-6xl mx-auto px-4 py-16">
       <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Contato</h2>
-      <p class="mt-2 text-neutral-600 max-w-prose">Conte, em poucas linhas, o que você precisa. Respondo com proposta objetiva.</p>
-
+      <p class="mt-2 text-neutral-600 max-w-prose">Descreva sua situação em 2–3 linhas. Respondo com proposta objetiva.</p>
       <div class="mt-8 grid lg:grid-cols-2 gap-8">
         <form class="space-y-4 p-6 bg-white rounded-2xl border">
-          <div>
-            <label class="block text-sm mb-1">Nome</label>
-            <input class="w-full rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-neutral-900" placeholder="Seu nome" />
-          </div>
+          <div><label class="block text-sm mb-1">Nome</label><input class="w-full rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-neutral-900" placeholder="Seu nome" /></div>
           <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-sm mb-1">E‑mail</label>
-              <input type="email" class="w-full rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-neutral-900" placeholder="voce@email.com" />
-            </div>
-            <div>
-              <label class="block text-sm mb-1">WhatsApp</label>
-              <input class="w-full rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-neutral-900" placeholder="(79) 9 9912‑0075" />
-            </div>
+            <div><label class="block text-sm mb-1">E‑mail</label><input type="email" class="w-full rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-neutral-900" placeholder="voce@email.com" /></div>
+            <div><label class="block text-sm mb-1">WhatsApp</label><input class="w-full rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-neutral-900" placeholder="(79) 9 9912‑0075" /></div>
           </div>
-          <div>
-            <label class="block text-sm mb-1">Mensagem</label>
-            <textarea rows="5" class="w-full rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-neutral-900" placeholder="Descreva sua demanda em 3‑5 linhas"></textarea>
-          </div>
-          <button type="button" class="w-full rounded-2xl bg-neutral-900 text-white py-2.5 text-sm hover:opacity-90">Enviar (demo)</button>
-          <p class="text-xs text-neutral-500">* Formulário de demonstração. Integre com e‑mail/WhatsApp informados.</p>
+          <div><label class="block text-sm mb-1">Mensagem</label><textarea rows="5" class="w-full rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-neutral-900" placeholder="Descreva sua demanda em 2–3 linhas"></textarea></div>
+          <a href="https://wa.me/557999120075" target="_blank" class="w-full text-center rounded-2xl bg-neutral-900 text-white py-2.5 text-sm hover:opacity-90 block">Enviar pelo WhatsApp</a>
+          <p class="text-xs text-neutral-500">* Formulário ilustrativo. Use o botão acima para contato rápido.</p>
         </form>
-
         <div class="space-y-4">
-          <a href="https://wa.me/557999120075" target="_blank" class="block p-5 rounded-2xl border bg-white hover:bg-neutral-50">
-            <div class="text-sm text-neutral-600">Atendimento rápido</div>
-            <div class="text-lg">WhatsApp profissional</div>
-            <div class="text-sm text-neutral-600 mt-1">Clique para iniciar uma conversa</div>
-          </a>
-          <div class="p-5 rounded-2xl border bg-white">
-            <div class="text-sm text-neutral-600">E‑mail</div>
-            <div class="text-lg">antonioguedes.jus@gmail.com</div>
-          </div>
-          <div class="p-5 rounded-2xl border bg-white">
-            <div class="text-sm text-neutral-600">Redes</div>
-            <div class="text-lg space-x-3">
-              <a href="https://instagram.com/antonioguedes" target="_blank" class="underline hover:no-underline">@antonioguedes</a>
-              <span>•</span>
-              <a href="https://instagram.com/antonioguedes.adv" target="_blank" class="underline hover:no-underline">@antonioguedes.adv</a>
-            </div>
-          </div>
+          <a href="https://wa.me/557999120075" target="_blank" class="block p-5 rounded-2xl border bg-white hover:bg-neutral-50"><div class="text-sm text-neutral-600">Atendimento rápido</div><div class="text-lg">WhatsApp profissional</div><div class="text-sm text-neutral-600 mt-1">Clique para iniciar uma conversa</div></a>
+          <div class="p-5 rounded-2xl border bg-white"><div class="text-sm text-neutral-600">E‑mail</div><div class="text-lg">antonioguedes.jus@gmail.com</div></div>
+          <div class="p-5 rounded-2xl border bg-white"><div class="text-sm text-neutral-600">Redes</div><div class="text-lg space-x-3"><a href="https://instagram.com/antonioguedes" target="_blank" class="underline hover:no-underline">@antonioguedes</a><span>•</span><a href="https://instagram.com/antonioguedes.adv" target="_blank" class="underline hover:no-underline">@antonioguedes.adv</a></div></div>
         </div>
       </div>
     </div>
@@ -225,16 +188,16 @@
   <footer class="border-t border-neutral-200 bg-white">
     <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-neutral-600 flex flex-col sm:flex-row items-center justify-between gap-3">
       <div>© <span id="year"></span> Antônio Guedes. Todos os direitos reservados.</div>
-      <div class="flex gap-4">
-        <a href="#home" class="hover:opacity-70">Início</a>
-        <a href="#servicos" class="hover:opacity-70">Serviços</a>
-        <a href="#contato" class="hover:opacity-70">Contato</a>
-      </div>
+      <div class="flex gap-4"><a href="#home" class="hover:opacity-70">Início</a><a href="#demandas" class="hover:opacity-70">Demandas</a><a href="#contato" class="hover:opacity-70">Contato</a></div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <!-- WhatsApp FAB -->
+  <a class="wa-fab" href="https://wa.me/557999120075" target="_blank" aria-label="WhatsApp">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.52 3.48C18.34 1.3 15.3 0 12.07 0 5.7 0 .54 5.16.54 11.53c0 2.03.54 4 .16 5.04L0 24l7.62-1.98c.96.37 2.5.53 4.45.53 6.36 0 11.53-5.16 11.53-11.53 0-3.23-1.3-6.27-3.58-8.54h-.01ZM12.07 21.5c-1.76 0-3.38-.23-4.1-.61l-.29-.15-4.51 1.18 1.2-4.4-.15-.3c-.41-.86-.63-2.43-.63-4.09 0-5.3 4.31-9.6 9.6-9.6 2.56 0 4.97.99 6.78 2.8 1.8 1.8 2.8 4.21 2.8 6.78-.01 5.3-4.32 9.6-9.6 9.6Zm5.56-7.18c-.3-.15-1.76-.86-2.03-.96-.27-.1-.47-.15-.67.15-.2.27-.77.96-.96 1.16-.2.2-.37.22-.67.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.34.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.94-2.22-.25-.6-.5-.52-.67-.52h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.09.15.2 2.1 3.2 5.09 4.49.71.31 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.02-1.43.26-.71.26-1.3.18-1.43-.07-.14-.27-.22-.57-.37Z" fill="white"/></svg>
+    <span>Falar no WhatsApp</span>
+  </a>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
